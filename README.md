@@ -1,22 +1,22 @@
-# 📰 Market Sentiment Checker
+# Market Sentiment Checker
 
 This Python script fetches the latest stock market update from [Schwab's daily open report](https://www.schwab.com/learn/story/stock-market-update-open), analyzes it using a language model (OpenAI or Anthropic), and logs whether the current market sentiment is **Bullish**, **Bearish**, or **Mixed**.
 
-Sentiment results are stored in a local `.log` file with the date, sentiment, model used, and model version — perfect for integrating with trading scripts or position sizing strategies.
+Sentiment results are stored in a local `.csv` file with the date, sentiment, model used, model version, article hash, and full raw response — perfect for integrating with trading scripts or position sizing strategies.
 
----
+## Features
 
-## 🚀 Features
+- Pulls the latest article from Schwab's Market Open page
+- Supports OpenAI GPT-4 and Anthropic Claude models
+- Classifies sentiment as Bullish, Bearish, or Mixed
+- Logs results in a `.csv` format with overwrite detection
+- Logs full raw LLM response and article content hash for transparency
+- Extracts and logs the published date from the article HTML
+- Sends push notifications using the Pushover API
+- Includes a developer log file with INFO and DEBUG levels
+- Controlled via environment variables using `.env`
 
-- ✅ Pulls latest article from Schwab's Market Open page
-- ✅ Supports **OpenAI GPT-4** or **Anthropic Claude 3.5 Sonnet**
-- ✅ Logs sentiment in `.csv`-style `.log` file
-- ✅ Automatically overwrites duplicate entries by date
-- ✅ Lightweight and fast (no database required)
-
----
-
-## 📦 Setup
+## Setup
 
 ### 1. Install dependencies
 
@@ -27,67 +27,60 @@ pip install -r requirements.txt
 ### 2. Create a `.env` file
 
 ```env
-USE_MODEL=openai        # or "anthropic"
-OPENAI_API_KEY=your-openai-api-key
-ANTHROPIC_API_KEY=your-anthropic-api-key
+USE_MODEL=anthropic                   # or "openai"
+OPENAI_API_KEY=your-openai-key
+ANTHROPIC_API_KEY=your-anthropic-key
+PUSHOVER_USER_KEY=your-pushover-user-key
+PUSHOVER_API_TOKEN=your-pushover-api-token
+LOG_LEVEL=INFO                        # or DEBUG, WARNING
 ```
 
----
+## Output Example
 
-## 🧠 Example Output
-
-Running the script will print and log:
-
-```bash
-📊 Today's Market Sentiment: Bullish (Model: anthropic / claude-3-5-sonnet-20241022)
-```
-
-And log it as:
+### Pushover Notification
 
 ```
-2025-04-11,Bullish,anthropic,claude-3-5-sonnet-20241022
+2025-04-11 — Sentiment: Bullish (Model: anthropic / claude-3-5-sonnet-20241022)
 ```
 
-in the file: `market_sentiment.log`
+### CSV Log File (`market_sentiment.csv`)
 
----
+```csv
+publish_date,sentiment,model,model_version,article_hash,raw_response
+2025-04-11,Bullish,anthropic,claude-3-5-sonnet-20241022,d41d8cd9,...,"Market sentiment appears bullish based on today's report..."
+```
 
-## 🛠 Customization
+### Debug Log File (`market_sentiment_debug.log`)
 
-- Change the `.log` filename in the script to customize location
-- Add logic to adjust trading size or strategy based on sentiment
-- To view historical sentiment: load `market_sentiment.log` with `pandas`
+```
+[INFO] 2025-04-11 08:00:00 — Article content extracted.
+[DEBUG] 2025-04-11 08:00:00 — Full article text: ...
+```
 
----
-
-## 📁 Files
+## Files
 
 - `market_sentiment_checker.py` — Main script
-- `.env` — Stores your API keys securely
-- `market_sentiment.log` — Local log file (ignored via `.gitignore`)
-- `requirements.txt` — Dependency list
+- `.env` — Environment configuration (not committed)
+- `market_sentiment.csv` — Main sentiment log
+- `market_sentiment_debug.log` — Developer log with INFO and DEBUG messages
+- `requirements.txt` — Python dependencies
 
----
+## Models
 
-## 🤖 Models
+| Provider   | Model                             | Use Case                     |
+|------------|-----------------------------------|-------------------------------|
+| OpenAI     | `gpt-4`                           | Deep analysis                 |
+| Anthropic  | `claude-3-5-sonnet-20241022`      | Fast + accurate (latest)     |
+| Anthropic  | `claude-3-opus-20240229`          | Most powerful                |
+| Anthropic  | `claude-3-sonnet-20240229`        | Balanced performance         |
+| Anthropic  | `claude-3-haiku-20240307`         | Fast & lightweight           |
 
-| Provider   | Model                             | Use Case              |
-|------------|-----------------------------------|------------------------|
-| OpenAI     | `gpt-4`                           | Deep analysis          |
-| Anthropic  | `claude-3-5-sonnet-20241022`      | Fast + accurate (latest) |
-| Anthropic  | `claude-3-opus-20240229`          | Most powerful          |
-| Anthropic  | `claude-3-sonnet-20240229`        | Balanced performance   |
-| Anthropic  | `claude-3-haiku-20240307`         | Fast & lightweight     |
+## Notes
 
----
+- This script is designed for local automation — ideal for use with a cron job.
+- The `.env` file allows you to toggle models, enable notifications, and set logging verbosity.
+- Ensure `.csv`, `.log`, and `.env` files are listed in `.gitignore`.
 
-## 🔒 Notes
+## Questions or Contributions?
 
-- API keys are never committed — make sure `.env` and `.log` are in your `.gitignore`.
-- This script is designed for **local automation** — adapt it to your trading system or cron schedule.
-
----
-
-## 📬 Questions or Ideas?
-
-Feel free to open an issue or tweak the prompt for your use case!
+Feel free to fork the repo, open issues, or share ideas for expanding this project.
