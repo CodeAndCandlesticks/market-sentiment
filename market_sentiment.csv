@@ -1,0 +1,2 @@
+publish_date,sentiment,model,model_version,article_hash,raw_response
+2025-04-15,Mixed,anthropic,claude-3-5-sonnet-20241022,2dc2ceaef4b0dc4779b920546de8df7a,Mixed
