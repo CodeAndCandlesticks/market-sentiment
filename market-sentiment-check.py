@@ -1,8 +1,25 @@
+# market-sentiment-check.py
+#
+# This script is designed to fetch the latest market sentiment article, analyze its sentiment,
+# and log the results. It also sends a push notification with the sentiment analysis.
+# Ensure you have the required packages installed:
+# pip install requests beautifulsoup4 python-dotenv openai anthropic
+# Make sure to set the environment variables in a .env file or your system environment.
+# The script will log messages based on the configured log level and send notifications via Pushover.
+# The script will retry fetching the article if it has not been updated today.
+# It will also handle errors gracefully and log them accordingly.
+# Note: The script assumes the article structure remains consistent with the current implementation.
+# Ensure you have the necessary permissions and API keys set up for OpenAI or Anthropic.
+# The script is designed to run periodically, so consider using a task scheduler like cron or Windows Task Scheduler.
+# Make sure to test the script in a controlled environment before deploying it in production.
+# The script is intended for educational purposes and should be used responsibly.
+
 import os
 import requests
 import hashlib
 import csv
 import re
+import time
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dotenv import load_dotenv
@@ -14,7 +31,6 @@ USE_MODEL = os.getenv("USE_MODEL", "openai")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-
 PUSHOVER_USER_KEY = os.getenv("PUSHOVER_USER_KEY")
 PUSHOVER_API_TOKEN = os.getenv("PUSHOVER_API_TOKEN")
 
@@ -56,80 +72,84 @@ def fetch_article():
     url = "https://www.schwab.com/learn/story/stock-market-update-open"
     headers = {"User-Agent": "Mozilla/5.0"}
     response = requests.get(url, headers=headers)
+    # Save response to a file for debugging
+    with open("article_html.log", "w", encoding="utf-8") as f:
+        f.write(response.text)
     return response.text
 
 def extract_article_text(html):
     soup = BeautifulSoup(html, "html.parser")
     paragraphs = soup.find_all("p")
-    return "\n".join(p.get_text() for p in paragraphs).strip()
+    article_text = "\n".join(p.get_text() for p in paragraphs if p.get_text().strip())
+    # Save response to a file for debugging
+    with open("article.log", "w", encoding="utf-8") as f:
+        f.write(article_text)
+    return article_text
 
-def extract_publish_date(html):
+def extract_publish_datetime(html):
     soup = BeautifulSoup(html, "html.parser")
     match = soup.find(string=re.compile("Published as of:"))
     if match:
-        date_text = re.search(r"Published as of: (.+?),", match)
-        if date_text:
+        # Step 1: Extract resilient short date for comparison (e.g., 'April 17, 2025')
+        short_date_match = re.search(r"Published as of: ([A-Za-z]+ \d{1,2}, \d{4})", match)
+        # Step 2: Extract full raw date string for push notification (e.g., 'April 17, 2025, 9:15 a.m. ET')
+        full_date_match = re.search(r"Published as of: (.+)", match)
+        log_message("DEBUG", f"Extracted full date text: {full_date_match.group(1) if full_date_match else 'None'}")
+        if short_date_match and full_date_match:
             try:
-                dt = datetime.strptime(date_text.group(1), "%B %d, %Y")
-                return dt.strftime("%Y-%m-%d")
-            except ValueError:
-                pass
-    return datetime.now().strftime("%Y-%m-%d")
+                short_clean_str = short_date_match.group(1).strip()
+                short_dt = datetime.strptime(short_clean_str, "%B %d, %Y")
+                log_message("DEBUG", f"Parsed short date: {short_dt}")
+                return short_dt.strftime("%Y-%m-%d"), full_date_match.group(1)
+            except ValueError as e:
+                log_message("ERROR", f"Failed parsing short datetime: {e}")
+    raise ValueError("Could not extract publish date from article.")
 
 def get_article_hash(text):
     return hashlib.md5(text.encode()).hexdigest()
 
-def get_sentiment_openai(article):
+def get_sentiment(article):
     prompt = f"""
 You are a financial analyst. Based on the following article, determine whether the market sentiment for today is bullish, bearish, or mixed.
-Respond with only one word: Bullish, Bearish, or Mixed.
+Respond with only one word: Bullish, Bearish, or Mixed at the start,  followed by 2-3 key indicators that explain your reasoning.
 
 Article:
 {article[:3000]}
 """
-    completion = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return completion.choices[0].message.content.strip()
+    if USE_MODEL == "openai":
+        completion = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return completion.choices[0].message.content.strip(), "gpt-4"
+    elif USE_MODEL == "anthropic":
+        response = client.messages.create(
+            model="claude-3-7-sonnet-20250219",
+            max_tokens=512,
+            temperature=0,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.content[0].text.strip(), "claude-3-7-sonnet-20250219"
+    return "Undetermined", "unknown"
 
-def get_sentiment_anthropic(article):
-    prompt = f"""
-You are a financial analyst. Based on the following article, determine whether the market sentiment for today is bullish, bearish, or mixed.
-Respond with only one word: Bullish, Bearish, or Mixed.
+def clean_sentiment(raw):
+    first_word = raw.strip().split()[0].lower().rstrip(".")
+    return first_word.capitalize() if first_word in {"bullish", "bearish", "mixed"} else "Undetermined"
 
-Article:
-{article[:3000]}
-"""
-    response = client.messages.create(
-        model="claude-3-5-sonnet-20241022",
-        max_tokens=10,
-        temperature=0,
-        messages=[{"role": "user", "content": prompt}]
-    )
-    return response.content[0].text.strip()
-
-def clean_sentiment(raw_response):
-    cleaned = raw_response.strip().lower().rstrip(".")
-    if cleaned in {"bullish", "bearish", "mixed"}:
-        return cleaned.capitalize()
-    return "Undetermined"
-
-def write_log_csv(publish_date, sentiment, model_used, model_version, article_hash, raw_response, filename="market_sentiment.csv"):
+def write_log_csv(today, raw_publish, sentiment, model_used, model_version, article_hash, raw_response, filename="market_sentiment.csv"):
     file_exists = os.path.isfile(filename)
     rows = []
 
     if file_exists:
         with open(filename, mode="r", newline="") as file:
-            reader = csv.reader(file)
-            rows = list(reader)
+            rows = list(csv.reader(file))
 
-    header = ["publish_date", "sentiment", "model", "model_version", "article_hash", "raw_response"]
-    log_row = [publish_date, sentiment, model_used, model_version, article_hash, raw_response]
+    header = ["today_date", "raw_publish_date", "sentiment", "model", "model_version", "article_hash", "raw_response"]
+    log_row = [today, raw_publish, sentiment, model_used, model_version, article_hash, raw_response]
     updated = False
 
     for i, row in enumerate(rows):
-        if row and row[0] == publish_date:
+        if row and row[0] == today:
             rows[i] = log_row
             updated = True
             break
@@ -140,35 +160,49 @@ def write_log_csv(publish_date, sentiment, model_used, model_version, article_ha
         rows.append(log_row)
 
     with open(filename, mode="w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerows(rows)
+        csv.writer(file).writerows(rows)
+
+def main(retry=False):
+    html = fetch_article()
+    article = extract_article_text(html)
+    log_message("INFO", "Fetched article text successfully. Check article.log for details.")
+    try:
+        publish_date, raw_publish_str = extract_publish_datetime(html)
+    except ValueError as e:
+        log_message("WARNING", f"{e}. Retrying in 10 seconds...")
+        if not retry:
+            time.sleep(10)
+            return main(retry=True)
+        else:
+            log_message("ERROR", "Retry failed. Still unable to extract publish date.")
+            return
+    log_message("INFO", f"Fetched article published on: {raw_publish_str}")
+
+    today_str = datetime.now().strftime("%Y-%m-%d")
+
+    if today_str != publish_date:
+        msg = f"Article has not been updated today. Publish time: {raw_publish_str}"
+        log_message("INFO", msg)
+        if not retry:
+            log_message("INFO", "Retrying in 1 minute...")
+            time.sleep(60)
+            return main(retry=True)
+        else:
+            log_message("WARNING", "Retry failed, article still not updated.")
+            return
+
+    sentiment_raw, model_version = get_sentiment(article)
+
+    sentiment = clean_sentiment(sentiment_raw)
+    article_hash = get_article_hash(article)
+    write_log_csv(today_str, raw_publish_str, sentiment, USE_MODEL, model_version, article_hash, sentiment_raw)
+    log_message("INFO", f"Sentiment for {today_str}: {sentiment}")
+    log_message("DEBUG", f"Article hash: {article_hash}")
+    log_message("DEBUG", f"Raw response: {sentiment_raw}")
+    log_message("INFO", "Logging complete. Sending push notification...")
+
+    push_message = f"{raw_publish_str} — Sentiment: {sentiment_raw[:400]}\nModel: {model_version}"
+    send_push_notification(push_message)
 
 if __name__ == "__main__":
-    html = fetch_article()
-    log_message("INFO", "Article HTML fetched successfully.")
-
-    article = extract_article_text(html)
-    log_message("INFO", "Article content extracted.")
-    log_message("DEBUG", f"Full article text:\n{article}")
-
-    publish_date = extract_publish_date(html)
-    article_hash = get_article_hash(article)
-
-    if USE_MODEL == "openai":
-        raw_response = get_sentiment_openai(article)
-        model_version = "gpt-4"
-    elif USE_MODEL == "anthropic":
-        raw_response = get_sentiment_anthropic(article)
-        model_version = "claude-3-5-sonnet-20241022"
-    else:
-        raw_response = "Undetermined"
-        model_version = "unknown"
-
-    sentiment = clean_sentiment(raw_response)
-    write_log_csv(publish_date, sentiment, USE_MODEL, model_version, article_hash, raw_response)
-
-    log_message("INFO", f"Sentiment result saved for {publish_date}: {sentiment}")
-    log_message("DEBUG", f"Model response: {raw_response}")
-
-    push_message = f"Publish Date: {publish_date}, Sentiment: {sentiment} (Model: {USE_MODEL} / {model_version})"
-    send_push_notification(push_message)
+    main()
