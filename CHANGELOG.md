@@ -1,16 +1,30 @@
 # Changelog
 
-## 2025-04-11: Initial version
-- Integrated Claude 3.5 Sonnet (`claude-3-5-sonnet-20241022`) as the default Anthropic model.
+## 2025-04-11: Alpha Version
 
-## 2025-04-11
+### Features
+- Enhanced `extract_publish_datetime()` to return both a machine-readable date (`YYYY-MM-DD`) for internal validation and the full raw publish timestamp for logging and push notifications.
+- Logged the publish date as extracted directly from the Schwab article HTML to improve traceability and debugability.
+- Captured the complete raw LLM response and stored it in the CSV sentiment log for transparency and post-analysis.
+- Improved sentiment validation by comparing only the date portion of the publish timestamp (ignoring time) for resilience across time zones and format variations.
+- Introduced a structured debug log (`market_sentiment_debug.log`) supporting multiple log levels (`INFO`, `DEBUG`, `WARNING`) to assist in troubleshooting.
+- Added a configurable `LOG_LEVEL` environment variable, allowing developers to toggle verbosity without changing code.
+- Implemented article content hashing (MD5) to detect duplicate articles across runs and prevent redundant LLM evaluations.
+- Integrated Claude 3.5 Sonnet (`claude-3-5-sonnet-20241022`) as the default model for sentiment analysis via Anthropic API.
 
-### Added
-- Changed sentiment log file extension to `.csv` for structured data output.
-- Added article content hashing to detect duplicate content day over day.
-- Logged publish date extracted from Schwab article HTML.
-- Stored full raw LLM response in the sentiment log for debugging and transparency.
-- Introduced a separate log file (`market_sentiment_debug.log`) with support for INFO and DEBUG levels.
-- Added a global `LOG_LEVEL` setting controlled by `.env`.
-- Replaced standard print output with Pushover push notifications including date and sentiment.
+---
 
+## 2025-04-21: Bugfix Release
+
+### Fixed
+- Updated the regex used for extracting the publish date to correctly include the year component (`April 17, 2025`) rather than truncating at the first comma (e.g., `April 17`), which had caused parsing failures.
+
+---
+
+## 2025-05-02: Beta Version
+
+### Features
+- Upgraded to Claude 3.7 Sonnet (`claude-3-7-sonnet-20250219`) to improve comprehension and response quality in sentiment analysis.
+- Increased the response token limit (`max_tokens`) to 256 to enable longer, multi-line responses that include sentiment plus reasoning.
+- Push notifications now include both the high-level sentiment and a concise explanation (truncated at 400 characters for Pushover compatibility) to provide richer, actionable context.
+- Refactored `clean_sentiment()` to extract only the first word of the LLM response, ensuring robust parsing of the sentiment label even when the output includes detailed commentary.

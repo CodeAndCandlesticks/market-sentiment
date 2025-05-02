@@ -111,7 +111,7 @@ def get_article_hash(text):
 def get_sentiment(article):
     prompt = f"""
 You are a financial analyst. Based on the following article, determine whether the market sentiment for today is bullish, bearish, or mixed.
-Respond with only one word: Bullish, Bearish, or Mixed.
+Respond with only one word: Bullish, Bearish, or Mixed at the start,  followed by 2-3 key indicators that explain your reasoning.
 
 Article:
 {article[:3000]}
@@ -125,7 +125,7 @@ Article:
     elif USE_MODEL == "anthropic":
         response = client.messages.create(
             model="claude-3-7-sonnet-20250219",
-            max_tokens=10,
+            max_tokens=512,
             temperature=0,
             messages=[{"role": "user", "content": prompt}]
         )
@@ -133,8 +133,8 @@ Article:
     return "Undetermined", "unknown"
 
 def clean_sentiment(raw):
-    cleaned = raw.strip().lower().rstrip(".")
-    return cleaned.capitalize() if cleaned in {"bullish", "bearish", "mixed"} else "Undetermined"
+    first_word = raw.strip().split()[0].lower().rstrip(".")
+    return first_word.capitalize() if first_word in {"bullish", "bearish", "mixed"} else "Undetermined"
 
 def write_log_csv(today, raw_publish, sentiment, model_used, model_version, article_hash, raw_response, filename="market_sentiment.csv"):
     file_exists = os.path.isfile(filename)
@@ -201,7 +201,7 @@ def main(retry=False):
     log_message("DEBUG", f"Raw response: {sentiment_raw}")
     log_message("INFO", "Logging complete. Sending push notification...")
 
-    push_message = f"{today_str} — Sentiment: {sentiment}\nPublished: {raw_publish_str}\nModel: {USE_MODEL} ({model_version})"
+    push_message = f"{raw_publish_str} — Sentiment: {sentiment_raw[:400]}\nModel: {model_version}"
     send_push_notification(push_message)
 
 if __name__ == "__main__":
