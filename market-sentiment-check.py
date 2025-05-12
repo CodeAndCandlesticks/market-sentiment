@@ -185,7 +185,7 @@ def main(retry=False):
         log_message("INFO", msg)
         if not retry:
             log_message("INFO", "Retrying in 1 minute...")
-            time.sleep(60)
+            time.sleep(300)
             return main(retry=True)
         else:
             log_message("WARNING", "Retry failed, article still not updated.")
