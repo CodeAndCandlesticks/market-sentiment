@@ -1,5 +1,4 @@
 #!/bin/bash
 cd "$(dirname "$0")/.."
-source .venv/bin/activate
-python3 market-sentiment-check.py
-deactivate
+pwd
+./.venv/bin/python3 market-sentiment-check.py
