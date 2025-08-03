@@ -1,5 +1,10 @@
 # Changelog
 
+## 2025-08-03: v0.4 Anthropic Model upgrade
+
+### Features
+* Upgraded to Claude Opus 4 (`claude-opus-4-20250514`) to improve comprehension and response quality in sentiment analysis, as current usage analysis showed no correlation between the provided sentiment and the actual market direction.
+
 ## 2025-04-11: Alpha Version
 
 ### Features

@@ -124,12 +124,12 @@ Article:
         return completion.choices[0].message.content.strip(), "gpt-4"
     elif USE_MODEL == "anthropic":
         response = client.messages.create(
-            model="claude-3-7-sonnet-20250219",
+            model="claude-opus-4-20250514",
             max_tokens=512,
             temperature=0,
             messages=[{"role": "user", "content": prompt}]
         )
-        return response.content[0].text.strip(), "claude-3-7-sonnet-20250219"
+        return response.content[0].text.strip(), "claude-opus-4-20250514"
     return "Undetermined", "unknown"
 
 def clean_sentiment(raw):
