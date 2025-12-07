@@ -68,3 +68,507 @@ publish_date,sentiment,model,model_version,article_hash,raw_response
 2025-07-30,"July 30, 2025, 9:13 a.m. ET",Mixed,anthropic,claude-3-7-sonnet-20250219,d484653022fdd8c91883a6cb8b428bf0,"Mixed. Job market indicators show slowing openings but low layoffs, suggesting stagnation. GDP growth exceeded expectations at 3%, but was influenced by falling imports rather than organic growth. Market awaits Fed decision with uncertainty about potential rate cuts."
 2025-07-31,"July 31, 2025, 9:17 a.m. ET",Mixed,anthropic,claude-3-7-sonnet-20250219,ced04d8c6d50bc2a0e699ecf10b3bcdd,"Mixed. Conflicting earnings reports from tech giants (Microsoft and Meta positive, but Apple and Amazon pending), hawkish Fed stance reducing rate cut expectations, and declining major indexes for two consecutive sessions."
 2025-08-01,"August 1, 2025, 9:12 a.m. ET",Bearish,anthropic,claude-3-7-sonnet-20250219,bc617ba99972b9672de2b92b118001cb,"Bearish. Key indicators: declining major indexes (S&P 500, Dow Jones), weak jobs report (73,000 vs 102,000 expected), and negative market reaction to Trump's new tariff announcements."
+2025-08-04,"August 4, 2025, 9:25 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,a474e4d82db475ec1fd69256f91819ad,"Bearish
+
+Key indicators:
+- Major indices closed down significantly on Friday (S&P 500 -1.60%, Dow -1.23%, Nasdaq -2.24%)
+- Disappointing jobs report with only 73,000 jobs added vs. 102,000 expected, plus dramatic downward revisions of 258,000 for prior months
+- Investors rotating into defensive utility stocks as a safe haven, indicating risk-off sentiment"
+2025-08-05,"August 5, 2025, 9:25 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,487bfcebc12fd562fed941dbf58d2525,"Bullish
+
+Key indicators:
+- Major indices up significantly (S&P +1.47%, Dow +1.34%, Nasdaq +1.95%)
+- Technology sector leading gains with strong earnings from Palantir
+- Rising expectations for September Fed rate cut following weak jobs data"
+2025-08-06,"August 6, 2025, 9:11 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,2a052c6c416750e55b4088f40f551307,"Bearish
+
+Key indicators:
+- Major indices all declined (S&P 500 -0.49%, Dow -0.14%, Nasdaq -0.65%)
+- S&P 500 fell for fifth session in six amid tariff and job market worries
+- Technical breakdown below key 6,300 support level threatens further selling"
+2025-08-07,"August 7, 2025, 9:11 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,feeebbfeca4d7166756b701c3b1bf2a1,"Bullish
+
+Key indicators:
+- Major indexes posted gains (S&P 500 +0.73%, Dow +0.18%, Nasdaq +1.21%) with markets taking new tariffs ""in stride""
+- Fed speakers sounding ""more dovish"" with growing expectations for rate cuts due to slowing job growth
+- Positive sentiment from China's better-than-expected trade data and Apple's strong 5%+ gain on new U.S. investment plans"
+2025-08-08,"August 8, 2025, 9:30 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,7b60593378225c78e03d38cf9b7ab5fd,"Bearish
+
+Key indicators:
+- VIX futures showing elevated volatility expectations (October VIX at 21 vs spot at 17), indicating market participants expect increased turbulence ahead
+- Wall Street's inability to hold gains with most sessions starting higher but ending with selling pressure
+- Analyst warning of higher-than-average odds for a 3-7% market pullback"
+2025-08-11,"August 11, 2025, 9:09 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,8a0c60c7c1b94b209941617819f32445,"Mixed
+
+Key indicators:
+- Market caught between bullish AI/tech earnings momentum and bearish concerns over tariffs and economic data
+- S&P 500 trading in narrow range (6,300-6,400) with resistance at highs and support at lows
+- Conflicting signals with strong tech performance but weakening jobs/manufacturing data and tariff uncertainty"
+2025-08-12,"August 12, 2025, 9:10 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,0d727157b0db27ea56315680e7bf4552,"Bearish
+
+Key indicators:
+- Major indices all declined (S&P 500 -0.25%, Dow -0.45%, Nasdaq -0.30%) with selling accelerating in the final hour
+- Core CPI inflation rose to 3.1% annually (above expectations of 3%), suggesting inflation progress has stalled
+- Defensive sector rotation evident with only consumer staples finishing positive, indicating risk-off sentiment"
+2025-08-13,"August 13, 2025, 9:12 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,75386fa8776c49bdedb487ca6b5f96a0,"Bullish
+
+Key indicators:
+- S&P 500 hit its 16th record high of the year with major indexes building on record gains
+- Volatility (VIX) fell to its lowest level since end of 2024, indicating market confidence
+- 98% probability of Fed rate cut in September following in-line CPI data at 2.7% YoY"
+2025-08-14,"August 14, 2025, 9:22 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,98febb4cf77b1737a770a741ae136c4f,"Bearish
+
+Key indicators:
+- July PPI jumped 0.9% vs 0.2% expected, the highest since 2022, raising inflation concerns
+- Treasury yields rose and stocks slipped on the inflation data, suggesting market concern about delayed rate cuts
+- Only 24% of S&P 500 stocks outperforming the index despite new highs indicates weak market breadth"
+2025-08-18,"August 18, 2025, 9:04 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,cde96fa1143d5bfad377e93d9404fe2d,"Mixed
+
+Key indicators:
+- Conflicting signals with major indexes wavering overnight (rising early then losing ground) and mixed sector performance
+- Positive market breadth (60% of S&P 500 above 50-day moving averages) contrasted with tech sector weakness and disappointing outlooks from CSCO and AMAT
+- Strong earnings beat rate (82% of S&P 500 companies surpassing estimates) offset by concerning economic data from China and plunging shipping rates"
+2025-08-19,"August 19, 2025, 9:08 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,3e3fb5636ad07b9cbe00c2406462d914,"Mixed
+
+Key indicators:
+- Conflicting economic signals with housing starts jumping sharply but building permits falling to cycle lows
+- Market breadth shows divergence with over 60% of S&P 500 stocks above 200-day moving averages, yet less than one-third outperformed the index in the last 60 days
+- Cautious ""wait-and-see"" tone ahead of Fed Chairman Powell's speech, with major indexes edging mostly lower despite some positive underlying metrics"
+2025-08-20,"August 20, 2025, 9:08 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,98e438987e209ab8f4d05b7e491e224d,"Bearish
+
+Key indicators:
+- Tech sector experienced significant selloff with major names like Palantir (-9%), Oracle, AMD, Broadcom, and Nvidia all down 3% or more
+- Major indexes dipped again in early trading following Tuesday's ""tech washout""
+- Market uncertainty ahead of Fed minutes release and Powell's upcoming speech on Friday"
+2025-08-21,"August 21, 2025, 9:11 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,df6864c6a5d2bab3562581be393561cf,"Bearish
+
+Key indicators:
+- Major indexes declined for fifth straight session with tech sector under continued pressure
+- Nasdaq-100 fell four consecutive sessions and dropped below its 20-day moving average
+- Market volatility rising ahead of Fed Chair Powell's Jackson Hole speech amid policy uncertainty"
+2025-08-22,"August 22, 2025, 9:14 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,97c4f8f361584346d663ee8e95ae5e8d,"Mixed
+
+Key indicators:
+- Tech sector weakness causing S&P 500's first 5-session losing streak since January, despite recent record highs
+- Conflicting signals with Fed officials expressing hesitance about rate cuts while markets still expect September cut
+- Global PMI improvements across all regions suggesting economic strength, which could complicate central bank easing decisions"
+2025-08-27,"August 27, 2025, 9:09 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,af3610c893f8b4a2544f187ffd82fdcf,"Bearish
+
+Key indicators:
+- Federal Reserve independence concerns after Trump's attempt to fire Fed Governor Lisa Cook, which could erode confidence and push yields higher
+- Tariffs raised to 50% on imports from India, signaling escalating trade tensions
+- Market uncertainty reflected in sideways trading ahead of Nvidia earnings, with history showing shares fell in 4 of 11 earnings beats"
+2025-08-28,"August 28, 2025, 9:14 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,1d3b99ee81de2cb9cf1ad841a20c93d1,"Mixed
+
+Key indicators:
+- Major indices showing slight gains (+0.21% to +0.32%) but tech sector under pressure from Nvidia's disappointing data center growth
+- Market breadth positive with 70% of S&P 500 members advancing and new record high, yet jobless claims data shows workers struggling to find employment
+- August traditionally weak but currently up 2.2%, though uncertainty remains ahead of tomorrow's PCE inflation data"
+2025-08-29,"August 29, 2025, 9:14 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,62e1349b6d960acd246b01f946b7c234,"Bullish
+
+Key indicators:
+- S&P 500 hit new all-time high above 6,500 for the first time
+- Inflation data (PCE) came in exactly as expected, giving Fed ""green light to cut rates""
+- Major indexes showing positive momentum with S&P 500 up 10% since May and semiconductor index up 21% over three months"
+2025-09-02,"September 2, 2025, 9:14 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,1a765b948c9624be9ae6e57d0ed2d80e,"Bearish
+
+Key indicators:
+- Tech sector slumping with Nvidia down 3%+ and broader tech weakness amid AI demand concerns
+- Treasury yields and volatility spiking on tariff ruling uncertainty
+- Risk-off trading dominating with defensive sectors (staples, healthcare) outperforming growth sectors"
+2025-09-03,"September 3, 2025, 9:10 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,3a14b42144493f61864ddd82525dde19,"Mixed
+
+Key indicators:
+- Positive tech sentiment from Google court ruling lifting GOOGL +6% and helping AAPL
+- Rising Treasury yields with 30-year touching 5% amid fiscal/tariff concerns pressuring stocks
+- Elevated volatility and Tuesday's market retreat offsetting some earnings-driven gains"
+2025-09-04,"September 4, 2025, 9:07 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,e7aaeb56659a9f60190962564c1cef85,"Mixed
+
+Key indicators:
+- Conflicting index performance (S&P 500 +0.51%, Dow -0.05%, Nasdaq +1.03%)
+- Deteriorating market breadth with 80% of S&P 500 stocks declining week-to-date and only 54% trading above 50-day moving average
+- Weak jobs data (ADP 54K vs 69K expected) increasing rate cut expectations but major indices showing resilience"
+2025-09-05,"September 5, 2025, 9:21 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,7c385d65de1102335d87208928855715,"Bullish
+
+Key indicators:
+1. Major indexes closed higher with S&P 500 near all-time highs (+0.83% gain)
+2. Weak jobs report (22,000 vs 75,000 expected) increases likelihood of Fed rate cuts
+3. Gold futures testing resistance near record levels, suggesting risk-on sentiment"
+2025-09-08,"September 8, 2025, 9:20 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,2cce69cd08a9e281367c4b4c56f44278,"Bearish
+
+Key indicators:
+- Jobs growth of just 22,000 last month came in well below estimates for around 78,000, reinforcing notions that employers are sharply cutting back
+- Major indices all showing negative performance (S&P down 0.32%, Dow down 0.48%)
+- Treasury yields plunged to lowest levels since April and volatility climbed, indicating investor uncertainty about economic slowdown"
+2025-09-09,"September 9, 2025, 9:10 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,5046457bc8ec81d55ad51501f6005ce7,"Bullish
+
+Key indicators:
+- Major indexes all posted gains (S&P 500 +0.21%, Dow +0.25%, Nasdaq +0.45%)
+- Nasdaq Composite reached a new all-time high close driven by semiconductor strength
+- 90% probability of Fed rate cut next week with Treasury yields at four-month lows"
+2025-09-10,"September 10, 2025, 9:13 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,225f1cb332666b4e32d5d657764e0978,"Bullish
+
+Key indicators:
+- PPI fell 0.1% vs. expected 0.3% rise, boosting rate cut hopes to 90% probability
+- All three major indexes hit new all-time highs Tuesday
+- Treasury yields declined and stocks received early boost from better-than-expected inflation data"
+2025-09-11,"September 11, 2025, 9:18 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,54d617d1882464650c2dd358f4fc8d6b,"Mixed
+
+Key indicators:
+- Major indexes showed divergence (S&P 500 up 0.30%, Dow down 0.48%, Nasdaq flat at 0.03%)
+- CPI came in above expectations (0.4% vs 0.3% expected), reducing odds of aggressive Fed rate cuts
+- Market breadth weakening with declining shares outnumbering advancing ones despite S&P 500 hitting new records"
+2025-09-12,"September 12, 2025, 9:15 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,e44fc0aea0f70056be3cd068cc0d50c0,"Bullish
+
+Key indicators:
+- Major indexes on pace for solid weekly gains despite slight early Friday pause
+- Stocks achieved multiple record highs Thursday with broad sector participation
+- 93% probability of Fed rate cut next week supporting continued market momentum"
+2025-09-15,"September 15, 2025, 9:13 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,0c327afff56e3e1723d455f91f21bb76,"Bullish
+
+Key indicators:
+1. Markets in ""melt up"" mode driven by AI investment cycle and anticipated Fed easing
+2. Tech-heavy Nasdaq hit new peak with S&P 500 gaining 1.6% weekly
+3. ""Don't fight the Fed"" sentiment dominating despite high valuations and uncertainty"
+2025-09-16,"September 16, 2025, 9:11 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,fe8fd5aa4835e74d491fa5e12ed1bfe3,"Bullish
+
+Key indicators:
+- Retail sales rose 0.6% in August, beating analyst consensus of 0.3%, with the control group rising 0.7%
+- S&P 500 closed above 6,600 for the first time and Nasdaq hit new all-time high
+- Markets showing ""melt up"" momentum amid positive AI investment cycle backdrop and rate cut expectations"
+2025-09-17,"September 17, 2025, 9:11 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,21f591f907295b985a217c3060ba3d03,"Mixed
+
+Key indicators:
+- Markets trading near record highs with futures showing little direction, suggesting uncertainty ahead of Fed decision
+- Conflicting economic signals with job weakness versus inflation still above 2% target creating policy dilemma
+- Warning of potential ""sell the news"" response and increased volatility despite anticipated rate cut"
+2025-09-18,"September 18, 2025, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,5e972d8fc9e80b7b55ab4fa504e356f5,"Mixed
+
+Key indicators:
+- Major indexes showed divergent performance with Dow up 0.57%, S&P 500 down 0.10%, and Nasdaq down 0.33%
+- Tech shares rallied in morning trading led by Nvidia, but overall market response to Fed rate cut was ""lackluster"" and ""unimpressed""
+- Uncertainty about future Fed policy path with ""wide dispersion of projections"" and disconnect between Fed's conservative outlook and market expectations"
+2025-09-19,"September 19, 2025, 9:10 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,02787378ed5653391f595a74637efe95,"Bullish
+
+Key indicators:
+- Major indexes (S&P 500, Nasdaq, Russell 2000) all hit record highs, with small-cap Russell 2000 reaching first record close since 2021
+- Fed confirmed two more rate cuts expected this year, supporting market liquidity
+- Despite some concerns about inflation and rate path divergence, the overall market momentum remains strongly positive with multiple sectors participating in the rally"
+2025-09-22,"September 22, 2025, 9:11 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,0935346b0673e170397fdb71c3c47758,"Bullish
+
+Key indicators:
+1. All major indexes hit record highs following the Fed's first rate cut in nine months
+2. Strong fundamental support cited including ""double digit earnings per share growth expectations"" and ""accommodative Fed""
+3. Technical analysis shows S&P 500 maintaining above 20-day moving average for five months with new highs at 6,671"
+2025-09-23,"September 23, 2025, 9:08 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,c5b4bf741ccfcecdbaf06c9fc2bf7d4e,"Mixed
+
+Key indicators:
+- Major indexes hit fresh record highs with strong performance from tech leaders like Nvidia, but market breadth remains concerning with only 60% of S&P 500 stocks above their 200-day moving average versus 80% a year ago
+- Precious metals (gold up 44% YTD, silver up 52% YTD) hitting all-time highs suggests inflation hedging and uncertainty about monetary policy
+- Fed officials making ""relatively hawkish"" and ""somewhat conservative"" remarks despite the recent rate cut, creating uncertainty about future policy direction"
+2025-09-24,"September 24, 2025, 9:08 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,35b213cf98bc8d900f9c478da42f7d14,"Bearish
+
+Key indicators:
+- Fed Chairman Powell stated ""equity prices are fairly highly valued,"" suggesting overvaluation concerns
+- Major averages declined with mega-cap stocks pulling back, including significant drops in AMZN (-3.04%) and NVDA (-2.82%)
+- Household exposure to financial assets at record 45.4%, exceeding dot-com bubble levels, indicating potential overallocation and excessive optimism"
+2025-09-25,"September 25, 2025, 9:08 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,dd04cb8eb08fccc950644dd4515187df,"Bullish
+
+Key indicators:
+1. Durable orders surged 2.9% vs expected -0.3% decline, with transportation up 7.9% and aircraft spending booming 50.1%
+2. GDP revised upward to 3.8% from 3.3%, marking strongest performance since Q3 2023
+3. New home sales jumped 20.5% month-over-month in August, the strongest since January 2022"
+2025-09-26,"September 26, 2025, 9:18 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,a0c315316c50251dd05e3f95a204addd,"Bearish
+
+Key indicators:
+- Major indexes declined (S&P down 0.50%, Dow down 0.38%, Nasdaq down 0.50%)
+- Rate cut expectations significantly reduced (December cut probability dropped from 83% to 61% in one week)
+- Concerns about new tariffs, potential government shutdown, and associated layoffs creating pressure on employment"
+2025-09-29,"September 29, 2025, 9:10 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,96e43f15b0354f57f5dc138d68eb55e9,"Bullish
+
+Key indicators:
+- Tech stocks including Nvidia leading gains with Treasury yields and dollar pulling back
+- S&P 500 sectors broadly rising with VIX dropping below 16 indicating low volatility
+- Earnings expectations for S&P 500 increasing to 7.9% growth ahead of earnings season"
+2025-09-30,"September 30, 2025, 9:11 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,4a51f3ffa473de07e1dfb84bc40855b9,"Bearish
+
+Key indicators:
+- Government shutdown fears causing early market declines and uncertainty about Friday's jobs report release
+- Rising VIX (+5%) despite Monday's gains suggests impending volatility
+- Concerns that lack of economic data could prevent Fed rate cuts and potentially threaten U.S. credit rating"
+2025-10-01,"October 1, 2025, 9:11 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,339069ad4abcb79428a9bd2b94e8b820,"Bearish
+
+Key indicators:
+- ADP employment fell by 32,000 jobs in September (well below consensus of +40,000), with August revised sharply lower
+- Government shutdown began with concerns it could last ""a month or longer,"" potentially impacting the broader economy
+- Manufacturing sector remains in contraction (below 50% since March) with additional tariffs adding pressure"
+2025-10-02,"October 2, 2025, 9:11 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,c4038cc8812c512078a6aecbb01bb2f4,"Mixed
+
+Key indicators:
+- Major indexes showing slight gains (+0.09% to +0.42%) with S&P 500 hitting new record high above 6,700
+- Government shutdown creating uncertainty about economic data releases and potentially keeping Fed from cutting rates
+- Defensive sectors like healthcare leading gains while tech sectors show mixed performance, suggesting cautious optimism"
+2025-10-03,"October 3, 2025, 9:09 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,f8b1ee20c893ce6ffcbf2e5f900f3338,"Mixed
+
+Key indicators:
+- Major indexes posted modest gains (S&P 500 +0.06%, Dow +0.17%, Nasdaq +0.39%) reaching new records, but strength was narrow with 7 of 11 sectors closing negative
+- Government shutdown creating significant uncertainty with 750,000 federal workers affected and key economic data releases suspended
+- Positive momentum in tech/AI sectors continuing while energy and consumer discretionary sectors lagged"
+2025-10-06,"October 6, 2025, 9:10 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,e0e7f188dc62d143ebfc936e117ecbcc,"Mixed
+
+Key indicators:
+- Conflicting sector performance with tech/semiconductors pulling back while S&P 500 maintains winning streak
+- Rotation into defensive sectors (healthcare, utilities) suggesting investor caution amid government shutdown concerns
+- Positive M&A activity and bitcoin highs offset by ongoing shutdown risks threatening consumer spending and economic data releases"
+2025-10-07,"October 7, 2025, 9:24 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,1bf6177d884d5cea53728970d9dc6ea9,"Mixed
+
+Key indicators:
+- Major indexes hit new record highs Monday but showed slight pause Tuesday morning, indicating momentum uncertainty
+- Government shutdown causing FAA staffing shortages and flight delays, creating economic headwinds
+- Schwab analysts express ""near-term cautious on tech"" outlook with expectations of higher volatility ahead"
+2025-10-08,"October 8, 2025, 9:12 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,cb0343df5ac6a5346d20a1d312013e8b,"Mixed
+
+Key indicators:
+- Major indexes pulled back Tuesday (S&P 500 down for first time in 8 sessions) but rebounded Wednesday morning, showing conflicting signals
+- Rising inflation expectations (3.4% from 3.2%) raising concerns about Fed control, creating uncertainty
+- ""Buy the dip"" mentality and risk-on sentiment persist despite government shutdown concerns and data availability issues"
+2025-10-09,"October 9, 2025, 9:16 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,98c4d5fa4b38fad7857696b700929af2,"Bullish
+
+Key indicators:
+- Major indices showing gains with S&P 500 and Nasdaq hitting new record highs
+- Strong corporate earnings from Delta exceeding expectations and TSM reporting 31% year-over-year revenue growth
+- AI sector momentum continuing with AMD soaring and semiconductor stocks recovering from brief profit concerns"
+2025-10-10,"October 10, 2025, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,78c721bbdbd0ef24cc8f2555f46299a5,"Mixed
+
+Key indicators:
+- Major indices showing slight declines (-0.08% to -0.52%) but stocks edged up in early trading
+- Government shutdown creating significant data uncertainty, affecting inflation and jobs reports
+- Markets near record highs despite Thursday's broad sector decline, with Treasury yields and oil dropping (potentially positive for stocks)"
+2025-10-13,"October 13, 2025, 9:22 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,97547795a410bd6adf2ab46d0a72dc65,"Bearish
+
+Key indicators:
+- Major indexes down sharply (S&P -2.71%, Dow -1.90%, Nasdaq -3.56%)
+- $2 trillion market cap wiped out Friday on trade tensions
+- Analysts citing ""stretched valuations and signs of frothy investor sentiment"" with ""less cushion"" for negative news"
+2025-10-14,"October 14, 2025, 9:11 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,dfc816285477a527c03217c9b0e707bb,"Bearish
+
+Key indicators:
+- New U.S.-China trade tensions with additional port fees and sanctions threatening to raise prices on goods
+- Market surrendered most of Monday's tech-driven gains due to China concerns
+- Volatility resuming climb on trade worries despite initial positive bank earnings"
+2025-10-15,"October 15, 2025, 9:15 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,7f71f4fcf42a52f599764683d914e02a,"Mixed
+
+Key indicators:
+- Conflicting index performance (Dow up +0.44%, Nasdaq down -0.76%, S&P down -0.16%)
+- Positive earnings momentum from banks and semiconductors offsetting ongoing trade war concerns
+- High probability of Fed rate cut (98%) providing support, but trade tensions with China escalating over soybeans and cooking oil"
+2025-10-16,"October 16, 2025, 9:12 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,c6df9b32db1cc7fcde20ab67d08e4477,"Mixed
+
+Key indicators:
+- Conflicting economic data with Philadelphia Fed Index plunging to -12.8 (far below expected 9.1) while housing and earnings remain positive
+- Technical weakness with S&P 500 below 20-day moving average for 4 straight sessions, yet major indices showing modest gains
+- Trade tensions escalating with new ""price floor"" policies against China, but strong TSM earnings boosting AI/chip sector optimism"
+2025-10-17,"October 17, 2025, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,1ccf9a35b8ded1dbe1d51005c59a7a86,"Bearish
+
+Key indicators:
+- Regional bank shares fell 6% Thursday amid credit concerns and fraudulent loan exposure
+- Major indices all declined (S&P 500 -0.63%, Dow -0.65%, Nasdaq -0.47%)
+- Market volatility increased due to ""speculative froth"" colliding with banking sector concerns"
+2025-10-20,"October 20, 2025, 9:19 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,4d070c0d9fd99dda4564284acc42a5f2,"Bullish
+
+Key indicators:
+- Major indices posted gains (+0.52-0.53%) with stocks swinging higher to start the week
+- Credit spreads haven't widened despite last week's volatility, indicating lack of contagion
+- Easing China trade tensions with planned Trump-Xi summit meeting helping market sentiment recover"
+2025-10-21,"October 21, 2025, 9:14 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,bfd637d90a23474e9c924c09137354ff,"Bullish
+
+Key indicators:
+- Major indexes posted strong gains (S&P +1.07%, Dow +1.12%, Nasdaq +1.37%) with stocks near all-time highs
+- Strong earnings season with companies like Coca-Cola, Lockheed Martin, and General Motors beating estimates
+- Positive sentiment on China trade progress and easing credit fears following solid regional bank results"
+2025-10-22,"October 22, 2025, 9:14 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,e6093bebbef669145802bc94f2959369,"Mixed
+
+Key indicators:
+- Conflicting index performance with Dow hitting record highs while Nasdaq declined
+- ""Risk-off"" sentiment emerging with sell-offs in gold, silver, crypto and speculative stocks
+- 10-year Treasury yield falling to six-month lows as money seeks perceived safety"
+2025-10-23,"October 23, 2025, 9:21 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,4e60a5dcac63c06cf9c5734b88686673,"Bearish
+
+Key indicators:
+- Major indexes down across the board (S&P -0.53%, Dow -0.71%, Nasdaq -0.93%)
+- Earnings misses from major companies (Tesla, IBM, Netflix) creating negative sentiment
+- Growing risk-off sentiment with speculative assets taking significant hits amid market uncertainty near all-time highs"
+2025-10-24,"October 24, 2025, 9:19 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,4444d1b13382f275e3c5d80dbfe8d62a,"Bullish
+
+Key indicators:
+- Major indexes closed near record highs with tech-heavy Nasdaq gaining 0.89%
+- Inflation came in cooler than expected (3% vs 3.1% forecast), increasing certainty of Fed rate cuts
+- Investors bought dips in riskier assets and crude oil surged 7.1% over two days"
+2025-10-27,"October 27, 2025, 9:19 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,29d4a0ec77f63a127f071486e0e5dd6d,"Bullish
+
+Key indicators:
+1. Major indexes hitting new all-time highs with S&P 500 up 0.79%, Dow up 1.01%, and Nasdaq up 1.15%
+2. Strong momentum in mega-cap tech stocks ahead of earnings reports from Microsoft, Apple, Alphabet, Meta, and Amazon
+3. Positive trade sentiment with China spurring optimism and VIX (fear index) declining significantly from 30 to below 16"
+2025-10-28,"October 28, 2025, 9:23 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,6f292886988f08f645098d9265ccb73a,"Bullish
+
+Key indicators:
+- Major indices showing positive momentum with S&P 500 at record highs (+0.79%), Dow Jones (+1.01%), and Nasdaq (+1.15%)
+- Strong earnings performance with companies like PayPal and UPS soaring on better-than-expected results, and overall corporate earnings showing resilient profit margins and above-normal beat rates
+- Positive trade sentiment with President Trump's comments about progress with China and broad market participation (3:1 advancers to decliners early in session)"
+2025-10-29,"October 29, 2025, 9:25 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,55ea29981c7ad9ab9529e23748959d2d,"Bullish
+
+Key indicators:
+- Major indexes showing positive momentum with S&P 500 hitting another record close (+0.23%), Dow Jones up 0.34%, and Nasdaq surging 0.80%
+- Tech sector rally accelerating with Nvidia up 5% and Microsoft up 2%, driven by optimism around potential tariff reductions from Trump-Xi meeting
+- Positive sentiment continuing in pre-market with overnight gains in Asian markets (Tokyo and Shanghai) carrying forward"
+2025-10-30,"October 30, 2025, 9:14 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,70c85b3878d559713a2711572efb5a53,"Bearish
+
+Key indicators:
+- Fed Chair Powell's hawkish comments caused December rate cut probability to plunge and turned S&P 500 from green to red
+- Major tech earnings (MSFT, META) dragged indexes lower despite solid results, suggesting market pessimism
+- 10-year Treasury yield soared above 4.1% from below 4%, indicating tightening financial conditions and rate concerns"
+2025-10-31,"October 31, 2025, 9:09 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,0b3ffb0d3c12c4d49461126daf2c53e6,"Bullish
+
+Key indicators:
+- Major indexes turned green this morning on upbeat results from Amazon and Apple
+- All five Magnificent Seven companies that reported earnings surpassed analysts' estimates
+- Bitcoin is up 3.05% to $110,215, indicating positive risk sentiment"
+2025-11-03,"November 3, 2025, 9:13 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,1050015b5cab231e3e5ffaf0b06ccd70,"Bullish
+
+Key indicators:
+- Major indexes hit record highs last week with continued momentum in tech stocks, particularly Nvidia and chip names
+- Strong earnings performance with 83% of S&P 500 companies beating bottom-line estimates and 79% beating top-line estimates
+- Positive market reaction to ""Fab 5"" earnings reports confirming aggressive AI spending and solid cloud growth"
+2025-11-04,"November 4, 2025, 9:13 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,1d671ab8ab1e38920dd14103d69feb3b,"Bearish
+
+Key indicators:
+- Major banks' executives expressing bearish sentiment casting a shadow on markets
+- Sharp early losses on Wall Street despite solid earnings from Palantir
+- Lack of economic clarity with government shutdown limiting jobs data availability"
+2025-11-05,"November 5, 2025, 9:12 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,721e5256a76d37e973e58893ed367847,"Bearish
+
+Key indicators:
+- Major indexes suffered their worst session in nearly a month with tech shares diving on AI valuation concerns
+- Chip sector plunged following disappointing AMD results, with continued weakness into the morning
+- Market psychology shifted negative as strong earnings (Palantir beat expectations) still resulted in an 8% decline, indicating sellers overwhelming any positive news"
+2025-11-06,"November 6, 2025, 9:16 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,072299bd39e51db22e803f8393db4554,"Bullish
+
+Key indicators:
+1. All major indexes posted gains (S&P +0.37%, Dow +0.48%, Nasdaq +0.65%)
+2. Markets rose in early trading Thursday and rebounded from Tuesday's AI-related selloff
+3. Increased probability of December Fed rate cut (67.5%) following weak jobs data, with Treasury yields retreating from sharp gains"
+2025-11-07,"November 7, 2025, 9:16 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,ab2dda606483a2d4939af6e02c47d8a9,"Bearish
+
+Key indicators:
+- Major indices down significantly (S&P -1.12%, Dow -0.84%, Nasdaq -1.90%)
+- Tech sector selloff with Nvidia down 2% pre-market and ""deleveraging"" in momentum stocks
+- Government shutdown pressures intensifying with FAA cutting flights by 10%"
+2025-11-10,"November 10, 2025, 9:25 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,f53bb7ade129a897b06c8fba2c940943,"Mixed
+
+Key indicators:
+- Major indices showing slight gains (S&P 500 +0.13%, Dow +0.16%) while Nasdaq is down (-0.21%), indicating divergent market performance
+- Positive catalyst from potential government reopening deal causing early market jump, but tech sector weakness persists with Nasdaq down 3% monthly
+- S&P 500 only 2% below all-time highs despite recent pullback, suggesting underlying market resilience amid multiple concerns"
+2025-11-11,"November 11, 2025, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,7110167d41b5440f49824e06efa4bab5,"Bearish
+
+Key indicators:
+- Nvidia (NVDA) down 2% on SoftBank selling holdings and poor CoreWeave earnings, dragging down the entire AI trade
+- Tech sector under renewed pressure after just one day of relief rally
+- Market uncertainty persists with government data still unavailable due to shutdown, limiting visibility for investors"
+2025-11-12,"November 12, 2025, 9:17 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,533f89dcc5a66e0fe5a87c3e22b44b3f,"Bullish
+
+Key indicators:
+- Major indexes climbed with Dow Jones Industrial Average reaching a new high
+- Tech shares swung higher led by Nvidia's 1% pop and risk-on sentiment returned
+- Market breadth widened with strong performance from healthcare and energy sectors"
+2025-11-13,"November 13, 2025, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,c86c08559d2c9d4134515d33efff920d,"Mixed
+
+Key indicators:
+- Conflicting index performance (Dow up 0.68%, Nasdaq down 0.26%)
+- Rotation out of big tech into value sectors (healthcare, materials, financials)
+- December rate cut odds declining from 65% to 55% amid Fed skepticism"
+2025-11-14,"November 14, 2025, 9:14 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,a22484001c2c323c7ff4d1188b70c5e3,"Bearish
+
+Key indicators:
+- Major indexes suffered their worst day in over a month with S&P 500 down 1.66%, Dow down 1.65%, and Nasdaq down 2.29%
+- Tech shares cratered with Magnificent Seven stocks falling across the board, including Tesla down 4% and Nvidia down 3% in pre-market
+- December Fed rate cut chances dropped to 50/50 from 66% earlier in the week, with missing government data and inflation concerns dampening sentiment"
+2025-11-17,"November 17, 2025, 9:19 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,dd4ced5574d2e2863a58e016226de2c9,"Bearish
+
+Key indicators:
+- Major indexes struggling with tech shares under pressure and declining rate cut hopes
+- Rising yields and rotation out of tech sectors indicating risk-off sentiment
+- Market showing ""lackluster span"" with concerns about high valuations and over-investment in AI"
+2025-11-18,"November 18, 2025, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,72ba057b7c2f555c7a57e4f3b2e0b998,"Bearish
+
+Key indicators:
+- Major indices down for fourth straight session (S&P 500 -0.92%, Dow -1.18%, Nasdaq -0.84%)
+- Semiconductor stocks down 8% and bitcoin down 17% for the month, indicating risk-off sentiment
+- Volatility hitting one-month highs with traders reducing risk exposure ahead of key earnings and data"
+2025-11-19,"November 19, 2025, 9:20 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,a7243b4deb0e4780b7a7b1336771257e,"Bearish
+
+Key indicators:
+- Major indexes declined with S&P 500 down 0.83% and Dow down 1.07%, marking the fourth straight session of losses
+- S&P 500 broke below its 50-day moving average and is 4% below all-time highs, experiencing its longest slide since August
+- December rate cut probability dropped to 50-50 amid concerns about stubborn inflation and weak labor market expectations (only 50,000 jobs expected)"
+2025-11-20,"November 20, 2025, 9:21 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,93691ffde88d175588122aa1892c31c7,"Bullish
+
+Key indicators:
+- Nvidia's solid results eased AI concerns and fueled an overnight tech rally
+- Major indices showed sharp gains with stocks rebounding after a four-day losing streak
+- Despite mixed economic data, stocks maintained their gains throughout the trading session"
+2025-11-21,"November 21, 2025, 9:16 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,13c8055f967b994df038b233652d063a,"Mixed
+
+Key indicators:
+- December rate cut probability surged from 39% to 71% after Fed's Williams comments, boosting morning futures
+- Yesterday saw ""ugly reversal"" with tech/crypto selling and S&P 500 Equal Weight Index falling sharply, indicating broad market weakness
+- Nvidia delivered solid results but concerns persist about AI infrastructure over-investment and debt issuance by hyperscalers"
+2025-11-24,"November 24, 2025, 9:12 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,22a3ca4eacd521515c81d7fd5690d45f,"Mixed
+
+Key indicators:
+- S&P 500 recovered above its 100-day moving average with ""moderately bullish"" near-term assessment from analysts
+- Market remains cautious after 2% decline last week with concerns about Fed policy uncertainty and profit-taking
+- 73% probability of December rate cut provides some support, though expert opinions remain divided"
+2025-11-25,"November 25, 2025, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,1b91492e6b68de53ba7cd487554a4b70,"Bearish
+
+Key indicators: 1) ADP report showing average job losses of 13,500 per week raises labor market concerns, 2) Retail sales rose only 0.2% versus 0.4% consensus expectations, 3) Major tech stock NVDA down 3% and weakness noted in bitcoin, quantum computing, and meme stocks indicating ""positioning adjustments underway"""
+2025-11-26,"November 26, 2025, 9:09 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,b22a4a61de7cc7acc71d048df5778a31,"Bullish
+
+Key indicators:
+- Major indices on three-day winning streak with S&P 500 breaking above 50-day moving average
+- Market breadth improving significantly with over 50% of S&P 500 stocks now above their 50-day moving averages (up from 31%)
+- Volatility easing appreciably and small caps leading rally with Russell 2000 up over 2%"
+2025-11-28,"November 28, 2025, 9:12 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,d040b7efbf637d1299815832c025c64b,"Bullish
+
+Key indicators:
+1. Major indexes rallied for fourth straight session with S&P 500 and Nasdaq recovering most November losses
+2. December rate cut probability stands at 83% according to CME FedWatch Tool, supporting market optimism
+3. Broad sector strength across chips, retailers, and mining firms with stocks moving higher in early trading despite technical glitch"
+2025-12-01,"December 1, 2025, 9:12 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,f342b9cef11ac4ce08788e9bb47275ed,"Bearish
+
+Key indicators:
+- Bitcoin/cryptocurrency plunged 5.5% with broader crypto-related stocks down 3-5%, signaling risk-off sentiment
+- Tech weakness continued with Nvidia down 1.8% pre-market after November's 12% decline, while Nasdaq posted first monthly loss since April
+- Flight to safety evident with gold rising 0.8% as money rotates from risk assets, combined with concerns about China manufacturing data and potential Japan rate hike"
+2025-12-02,"December 2, 2025, 9:12 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,3992399f75ae29e8d54b7afa2cd4c188,"Bullish
+
+Key indicators:
+1. Bitcoin and crypto-related stocks rebounding strongly (+2% for BTC, crypto stocks among overnight leaders)
+2. MongoDB surging 22% on strong earnings beat and guidance
+3. Tech stocks advancing in pre-market with positive momentum returning after yesterday's pullback"
+2025-12-03,"December 3, 2025, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,504bc123faf2708e754ab502e65a3fa9,"Mixed
+
+Key indicators:
+- Conflicting economic signals with surprise ADP job losses (-32,000 vs +10,000 expected) increasing rate cut probability to 90%, yet stocks maintaining early gains
+- Divergent sector performance with tech/crypto showing strength (Bitcoin +6%, crypto stocks up 2-3%) while retail weakness evident (Macy's -6% despite beat)
+- Market breadth concerns with more declining than advancing stocks despite S&P 500 near all-time highs, suggesting limited conviction"
+2025-12-04,"December 4, 2025, 9:12 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,fd57e3fd148c051970b2d829e2290507,"Mixed
+
+Key indicators:
+- Conflicting jobs data with layoffs at 3-year highs while jobless claims hit 3-year lows
+- Market showing mild gains with improved breadth (75% of S&P 500 stocks up) but overall lackluster momentum
+- Earnings results split between strong performers (Salesforce, Dollar General) and disappointments (Snowflake despite beating expectations)"
+2025-12-05,"December 5, 2025, 9:17 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,7c9376a581e2feb644eb029e844dd248,"Bearish
+
+Key indicators: 1) Risk-off sentiment moving in ahead of PCE data and Fed meeting, 2) Major indices turning lower in early trading with S&P 500 down 0.46%, 3) Bitcoin futures falling over 2% indicating reduced risk appetite."
