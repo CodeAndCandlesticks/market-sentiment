@@ -1,5 +1,4 @@
-publish_date,sentiment,model,model_version,article_hash,raw_response
-2025-04-15,Mixed,anthropic,claude-3-5-sonnet-20241022,2dc2ceaef4b0dc4779b920546de8df7a,Mixed
+date,publish_date_from_article,sentiment,model,model_version,article_hash,raw_response
 2025-04-21,"April 21, 2025, 9:15 a.m. ET",Mixed,anthropic,claude-3-5-sonnet-20241022,2df5ae03eb07e6e638be698b20f97ecf,Mixed
 2025-04-22,"April 22, 2025, 9:16 a.m. ET",Mixed,anthropic,claude-3-5-sonnet-20241022,420d510c053ef407d5aa70daf35b62ac,Mixed
 2025-04-23,"April 23, 2025, 9:12 a.m. ET",Bullish,anthropic,claude-3-5-sonnet-20241022,c232970a2c36079c2eaed06e09f4e6e9,Bullish
