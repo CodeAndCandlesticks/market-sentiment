@@ -991,3 +991,90 @@ Key indicators: 1) Stocks surrendered most of yesterday's gains due to 4% oil ra
 2026-03-27,"March 27, 2026, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,7e679232783955a523712decbc8e92cf,"Bearish
 
 Key indicators: 1) Major indexes on pace for fifth straight losing week with Nasdaq entering correction territory (down 10%), 2) War tensions mounting without resolution signs while crude oil climbs above $110/barrel, 3) Treasury yields hitting nine-month highs on inflation fears with investors shying from risk."
+2026-03-30,"March 30, 2026, 9:12 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,f85cd9f27caa0ccf95b108275fdbd022,"Mixed
+
+Key indicators:
+- Stocks opened higher despite geopolitical tensions and rising oil prices, showing resilience
+- Major indices in correction/near-correction territory (Nasdaq -10%, S&P 500 -9%) after five consecutive losing weeks
+- Conflicting signals between positive investor focus on potential de-escalation versus ongoing Middle East tensions and trade concerns with China"
+2026-03-31,"March 31, 2026, 9:10 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,c9fb23e847f6fffbcd1b6b05493d01be,"Bearish
+
+Key indicators:
+- Major indexes ""mostly flopped"" with S&P 500 remaining in a technical downtrend
+- Crude oil above $100/barrel and gas at $4/gallon creating recession concerns
+- Weak February payrolls (-92,000) and risk-off sentiment dominating despite positive headlines"
+2026-04-01,"April 1, 2026, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,7adb018dbfc4552c99660888a4787387,"Mixed
+
+Key indicators:
+- Conflicting signals with major indexes posting best session in almost a year (+2.9% S&P 500) while volatility and Treasury yields rose slightly
+- Oil prices remain elevated despite brief dip below $100, with futures still projecting higher prices than pre-war levels
+- Rally may be technical (quarter-end short covering and window dressing) rather than fundamental, with geopolitical risks still prominent"
+2026-04-02,"April 2, 2026, 9:28 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,ae3b1772b050bc8b7327a7af75c9ae0c,"Bearish
+
+Key indicators:
+- President Trump's threat to hit Iran ""extremely hard"" with no clear resolution path is escalating geopolitical tensions
+- Oil prices rising while stocks sank in response to the Iran war developments
+- Treasury yields and volatility remaining stubbornly elevated despite some retreat, indicating persistent investor concerns about the conflict"
+2026-04-03,"April 3, 2026, 9:25 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,6161879b4d714bccd7cd99765a7f1d5a,"Bullish
+
+Key indicators:
+- Jobs growth of 178,000 far exceeded expectations of 50,000, showing economic resilience
+- Unemployment rate declined to 4.3% from 4.4%, indicating labor market strength
+- Major indexes recovered from early losses to close higher, demonstrating market resilience despite geopolitical tensions"
+2026-04-06,"April 6, 2026, 9:13 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,aeef19b17f2562d72462dc5c42c12f3e,"Mixed
+
+Key indicators:
+- Conflicting signals between positive jobs data (178,000 vs expected) and persistent geopolitical tensions with oil at $110/barrel
+- Major indexes broke 5-week losing streak but remain in downtrends below key technical levels
+- Semiconductor index showing ""incrementally bullish"" technical signals while VIX remains elevated but not extreme"
+2026-04-07,"April 7, 2026, 9:15 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,630ea5741d1102086d2333c2885c95a3,"Bearish
+
+Key indicators:
+- Geopolitical tensions with Iran threatening to close Strait of Hormuz and Trump's ultimatum deadline, causing early stock declines
+- Crude oil spiking to $114/barrel amid military strikes on Iran's Kharg Island oil facility
+- Worse-than-expected economic data with February durable goods orders dropping 1.4% monthly"
+2026-04-08,"April 8, 2026, 9:12 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,c75a98092bdbb92473c374bf2f075e85,"Bullish
+
+Key indicators:
+- Stocks surged and Treasury yields dove following the Iran ceasefire announcement, with futures showing significant rebounds
+- Market leadership concentrated in growth-oriented cyclical sectors (consumer discretionary, tech, communication services) that typically outperform in expanding economies  
+- Fed rate cut odds jumped to 45% while rate hike probability dropped below 1%, signaling easing monetary policy expectations"
+2026-04-09,"April 9, 2026, 9:15 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,54d44d4e831e4981c73b6535775ebf04,"Mixed
+
+Key indicators:
+- Inflation data came in slightly hot with core PCE at 0.3% vs 0.3% expected, raising Fed concerns
+- Major indexes rallied 2.5% Wednesday on ceasefire hopes, but today's market is taking a ""breather""
+- Geopolitical tensions remain elevated with oil prices still above pre-war levels and ceasefire described as ""fragile"""
+2026-04-10,"April 10, 2026, 9:08 a.m. ET",Mixed,anthropic,claude-opus-4-20250514,682619720a5da1f9ed34650bf9177ee5,"Mixed
+
+Key indicators:
+- Core CPI came in below expectations (0.2% vs 0.3% consensus), suggesting underlying inflation remains controlled
+- Geopolitical tensions persist with the Strait of Hormuz virtually closed and fragile ceasefire conditions, creating market uncertainty
+- Market breadth improved significantly (S&P 500 stocks above 50-day moving average jumped from 18% to 48%) but remains below the healthy 55% average"
+2026-04-13,"April 13, 2026, 9:09 a.m. ET",Bearish,anthropic,claude-opus-4-20250514,152f47ac958cbd469c5c93ddfe3cda9e,"Bearish
+
+Key indicators:
+- Oil surged nearly 8% above $100/barrel on U.S. blockade announcement and stalled ceasefire talks
+- President Trump's naval blockade of Iranian ports sparked a ""downward spin"" in stocks despite slight recovery
+- March CPI rose dramatically due to energy costs, signaling persistent inflationary pressures from the conflict"
+2026-04-14,"April 14, 2026, 9:14 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,fcfc4233ae8b1b2ae1c9d2a15024c903,"Bullish
+
+Key indicators:
+- Stocks building on yesterday's sharp rally with tech shares continuing to advance
+- S&P 500 Index recovered above pre-war levels amid chip and financial sector strength  
+- Below-consensus PPI data (0.5% vs 1.2% expected) suggesting tame inflation pressures"
+2026-04-15,"April 15, 2026, 9:08 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,c49cafc04a535fd2287ef2ad3245fc4e,"Bullish
+
+Key indicators:
+- Major indexes near all-time highs with Nasdaq on 10-day winning streak (longest since 2021)
+- Positive geopolitical developments with potential peace talks resumption and improved Strait of Hormuz traffic
+- Strong technical momentum with S&P 500 above 200-day moving average and RSI showing pre-war strength levels"
+2026-04-16,"April 16, 2026, 9:13 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,a03184cd854a72a74e6099e3ccf8ce9b,"Bullish
+
+Key indicators:
+- S&P 500 and Nasdaq hit new all-time highs with S&P closing above 7,000 for the first time
+- Positive economic data with jobless claims (207,000) coming in below consensus expectations (215,000)
+- Oil prices stabilizing below $100/barrel despite geopolitical tensions, suggesting contained inflation concerns"
+2026-04-17,"April 17, 2026, 9:19 a.m. ET",Bullish,anthropic,claude-opus-4-20250514,4e0d2bf7f7a3d7f8e273788a175c056e,"Bullish
+
+Key indicators: 1) Major indexes on track for third straight winning week with Nasdaq on 12-session winning streak, longest since 2009. 2) Geopolitical tensions easing significantly with Strait of Hormuz reopening and oil dropping 10% on peace deal prospects. 3) Strong momentum flows into previously lagging sectors (financials, discretionary, tech) with short covering fueling additional upside."
